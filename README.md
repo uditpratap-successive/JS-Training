@@ -12,7 +12,7 @@ The five different stages of atomic design are:
 
 Now we will see the seperate explaination of each stage:
 
-<h2>ATOMS</h2>
+<h2>Atoms</h2>
 
 As we know that in science, an atom is the smallest unit of depend that makes up a chemical element, in addition to the smallest unit of a cell. Every solid, liquid, gas, and plasma is made from impartial or ionized atoms.Similarly, in design, atoms are the most basic components. They are the building blocks of design such as buttons, lines, shapes, icons, text fields, text labels, etc.
 
@@ -40,7 +40,7 @@ In atomic design, "pages" represent the highest level of the design hierarchy. T
 Pages are the actual representations of what users see and interact with in an application or website. They combine templates, organisms, molecules, and atoms to create cohesive and functional user experiences.
 
 
-<h1>Benefits of following Atomic design</h1>
+<h2>Benefits of following Atomic design:</h2>
 
 1.Modularity: Atomic design breaks down UI elements into smaller, reusable components called atoms, molecules, organisms, templates, and pages.
 
@@ -54,4 +54,56 @@ Pages are the actual representations of what users see and interact with in an a
 
 6.Responsive Design: Atomic design is well-suited for responsive design practices, allowing UI components to adapt seamlessly to different screen sizes and devices.
 
+
+<h1> Twelve-Factor App</h1>
+
+ the Twelve-Factor App methodology is a set of best practices for building modern, scalable, and maintainable web applications. Each factor addresses a different aspect of the application's development and deployment process.
+
+<h2>1 .Codebase</h2>
+
+The application has a single codebase tracked in version control, such as Git.
+
+<h2>2. Dependencies</h2>
+
+All dependencies, including system tools and libraries, are explicitly declared and isolated.
+
+<h2> 3. Config</h2>
+
+Configuration is stored in the environment and can be easily changed between deployments.
+
+<h2> 4. Backing Services</h2>
+
+The app treats third-party services as attached resources, accessed via a URL or other connection details stored in the environment.
+
+<h2> 5. Build, release, run</h2>
+
+The build and release stages are separate, and the release can be easily tracked and reproduced.
+
+<h2>6. Processes</h2>
+
+The app is executed as one or more stateless processes, with no shared state, allowing for easy scaling.
+
+<h2> 7. Port Binding</h2>
+
+The app exports services via port binding and is self-contained, making it easy to deploy with minimal dependencies.
+
+<h2> 8. Concurrency</h2>
+
+Concurrency is achieved by scaling out the stateless processes, making it easy to scale the application horizontally.
+
+<h2> 9. Disposability</h2>
+
+The app can be started or stopped quickly, facilitating easy scaling up or down based on demand.
+
+<h2> 10. Dev/Prod Parity</h2>
+
+The development, staging, and production environments are as similar as possible, reducing the risk of issues when deploying.
+
+<h2>11. Logs</h2>
+
+Logs are treated as event streams, and the app does not concern itself with routing or storage of log entries.
+
+<h2>12. Admin Processes</h2>
+
+Any admin tasks, such as database migrations or one-time scripts, are run as one-off processes.
 
