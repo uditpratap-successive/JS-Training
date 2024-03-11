@@ -9,7 +9,6 @@ const counting=(s)=>{
         else
         freq[s[i]]=1;
     }
-    //console.log(freq);
     let s1="";
     for(i in freq)
     {
@@ -17,6 +16,5 @@ const counting=(s)=>{
     }
     return s1;
 }
-
 
 console.log(counting("abcabcdabbcc"));
