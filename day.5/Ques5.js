@@ -4,7 +4,7 @@
  Output: { 'a': 1, 'b.c': 2, 'b.d.0': 3, 'b.d.1': 4 }
  */
 
- const obj = {
+ const objectt = {
   a: 1,
   b: { c: 2, d: [3, 4] },
 };
@@ -21,4 +21,4 @@ const flatten = (obj, prefix = "") => {
   }
   return flattenedObj;
 };
-console.log(flatten(obj));
+console.log(flatten(objject));

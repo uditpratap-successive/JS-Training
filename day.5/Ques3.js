@@ -1,8 +1,24 @@
 // Write a program to remove all the id key from array of object ({name:"John", age:27, id:1})
 
-var array = [{"bad": "habit", "good":"consistency"},{"bad":"Practices", "good":"culture"}];
+const arrayOfObjects = [
+  { name: "John", age: 27, id: 1 },
+  { name: "Jane", age: 30, id: 2 },
+  { name: "Bob", age: 25, id: 3 }
+];
 
-for (var i = 0, len = array.length; i < len; i++) {
-  delete array[i].bad;
+function removeIdKey(object) {
+  const { id, ...rest } = object;
+  return rest;
 }
-console.log(array);
+
+
+const newArray = arrayOfObjects.map(removeIdKey);
+
+console.log(newArray);
+
+/* output - [
+  { name: 'John', age: 27 },
+  { name: 'Jane', age: 30 },
+  { name: 'Bob', age: 25 }
+]
+*/
