@@ -32,3 +32,6 @@ const peopleArray = [person1, person2, person3];
 
 console.log(person1.fullName());
 console.log(Person.averageAge(peopleArray).toFixed(2)); 
+
+/*output= The name of the person is Udit Pratap
+25.67*/
