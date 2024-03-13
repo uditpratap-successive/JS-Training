@@ -5,11 +5,15 @@
 4 4 4 4
 */
 
-for(let i=1;i<=4;i++){
-    let row="";
-    for(let j=1;j<=i;j++){
-        row+=i+" ";
+const patternbuilder=(x)=>{
+    for(let i=1;i<=x;i++){
+        let row="";
+        for(let j=1;j<=i;j++){
+            row+=i+" ";
+        }
+    console.log(row);
+    
     }
-console.log(row);
-
 }
+patternbuilder(5)
+

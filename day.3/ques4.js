@@ -10,5 +10,6 @@ for(let i=1;i<100;i++){
         arr2.push(i);
     }
 }
-console.log(arr);
-console.log(arr2);
+
+const a=[...arr,...arr2];
+console.log(a);
