@@ -1,8 +1,8 @@
 /*Print the pattern
-       *
-      *  *
-    *  *  *
-  *  *  *  *
+       *            i|s|j
+      *  *          0 4 1
+    *  *  *         1 3 2
+  *  *  *  *        2 2 3
 *  *  *  *  *
   *  *  *  *
     *  *  *
@@ -34,3 +34,4 @@ function createDimondShape(size) {
     console.log(star);
   }
   createDimondShape(5);
+

@@ -5,8 +5,9 @@
 7 8 9 10
 */
 
+const printer=(x)=>{
 let count=1;
-for(let i=0;i<4;i++){
+for(let i=0;i<x;i++){
     let row="";
     for(let j=0;j<=i;j++){
         row+=count+" ";
@@ -14,6 +15,7 @@ for(let i=0;i<4;i++){
     }
    console.log(row);
 }
-
+}
+printer(6);
 
 
