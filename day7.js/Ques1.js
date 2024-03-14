@@ -1,6 +1,6 @@
 //Give an example of using a callback function to handle an asynchronous operation in JavaScript (Use any open api to make a call)
 
-const func= async (print)=>{
+const func=  (print)=>{
     setTimeout(async ()=>{
         const res = await fetch("https://currency-exchange.p.rapidapi.com/listquotes", {
        headers: {
@@ -8,7 +8,7 @@ const func= async (print)=>{
         "X-RapidAPI-Host": "currency-exchange.p.rapidapi.com",
         },
         });
-        const data = await res.json();
+        const data =  res.json();
         print(data);
 
     },1000)

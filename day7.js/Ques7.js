@@ -1,53 +1,27 @@
 //7. Create a function that performs multiple asynchronous operations in parallel using async/await and waits for all of them to complete before returning the results.
-const pro1 = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      let value = 1;
-      resolve("1");
-      console.log("I am printing the value 1");
-    }, 1000);
-  });
-};
 
-const pro2 = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      let value = 2;
-      resolve("2");
-      console.log("I am printing the value 2");
-    }, 2000);
-  });
+const createPromises = (range) => {
+  const promises = [];
+  for (let i = 0; i < range; i++) {
+      promises.push(
+          new Promise((resolve, reject) => {
+              
+              setTimeout(() => {
+                  console.log(`Promise ${i + 1} resolved`);
+                  resolve(`I am resolved ,I  am promise no. ${i+1}`);
+              }, 2000); 
+          })
+      );
+  }
+  console.log(promises)
+  return promises;
 };
-
-const pro3 = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      let value = 3;
-      resolve("3");
-      console.log("I am printing the value 3");
-    }, 3000);
-  });
-};
-
-const pro4 = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      let value = 4;
-      resolve("4");
-      console.log("I am printing the value 4");
-    }, 4000);
-  });
-};
+const allPromises = createPromises(10);
 
 let hello = async () => {
-  const [a, b, c, d] = await Promise.all([pro1(), pro2(), pro3(), pro4()]);
-  console.log(a, b, c, d);
+  const [...a] = await Promise.all(allPromises.map((i)=> i));
+  console.log(a);
 };
 
 hello();
 
-// output=I am printing the value 1
-// I am printing the value 2
-// I am printing the value 3
-// I am printing the value 4
-// 1 2 3 4
