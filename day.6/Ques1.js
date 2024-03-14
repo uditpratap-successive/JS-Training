@@ -1,27 +1,32 @@
 //1. Create a class BankAccount with properties balance and owner and methods deposit(), withdraw(), and displayBalance().
 
+
 class BankAccount {
     constructor(owner, balance) {
         this.ownername = owner;
         this.balanceremain = balance;
     }
-    deposit() {
-        console.log(`My name is ${this.ownername} and I want to deposit the ${this.balanceremain} rupees`);
+    deposit(amount) {
+        this.balanceremain=this.balanceremain+amount
+        console.log(this.balanceremain);
     }
-    withdraw() {
-        console.log(`My name is ${this.name} and I want to withdraw my remaining ${this.balanceremain} rupees`);
+    withdraw(amount) {
+        this.balanceremain-=amount;
+        console.log(this.balanceremain)
+
     }
-    displayBalance() {
+    displayBalance(amount) {
         console.log(`Money remains in my bank account is ${this.balanceremain} rupees`);
     }
 
 }
 
-let person1 = new BankAccount('Sahil', '266778');
-let person2 = new BankAccount('7000');
-person2.displayBalance();
-person1.deposit();
+let person1 = new BankAccount('Sahil', 9000);
+person1.deposit(500);
+person1.withdraw(500);
+person1.displayBalance();
 
-/*utput= Money remains in my bank account is undefined rupees
-My name is Sahil and I want to deposit the 266778 rupees
-*/
+
+// 9500
+// 9000
+// Money remains in my bank account is 9000 rupees
